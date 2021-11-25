@@ -1,0 +1,102 @@
+:root {
+  font-size: $default-text-size;
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'Rubik', sans-serif;
+  // font-family: 'Poppins', sans-serif;
+  color: snow;
+  font-size: 1.8rem;
+  .font-weight-300 {
+    font-weight: 300;
+  }
+  .font-weight-400 {
+    font-weight: 400;
+  }
+  .font-weight-500 {
+    font-weight: 500;
+  }
+  .font-weight-600 {
+    font-weight: 600;
+  }
+
+  .profile {
+    // Profile Text
+    &__text {
+      font-weight: 300;
+      color: $color-neutral-pale-blue;
+      font-size: 1.6rem;
+
+      @include respond(330) {
+        font-size: 1.5rem;
+      }
+    }
+    // Profile Name
+    &__name {
+      font-size: 4rem;
+      font-weight: 300;
+      line-height: 1.3;
+
+      @include respond(960) {
+        font-size: 3.5rem;
+      }
+      @include respond(700) {
+        font-size: 2.6rem;
+      }
+      @include respond(330) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .timelines {
+    &__item a {
+      font-weight: 300;
+      text-decoration: none;
+      color: $color-neutral-pale-blue;
+
+      &.active,
+      &:hover {
+        color: snow;
+        font-weight: 400;
+      }
+      @include respond(340) {
+        font-size: 1.65rem;
+      }
+    }
+  }
+
+  .activity-content {
+    padding: 3rem;
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__time {
+      font-size: 5.5rem;
+      font-weight: 300;
+
+      @include respond(960) {
+        font-size: 3.5rem;
+      }
+      @include respond(700) {
+        font-size: 3rem;
+      }
+      @include respond(340) {
+        font-size: 2.6rem;
+      }
+    }
+    &__time--previous {
+      color: $color-neutral-pale-blue;
+      font-weight: 300;
+      @include respond(960) {
+        font-size: 1.5rem;
+      }
+      @include respond(340) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

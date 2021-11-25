@@ -1,0 +1,96 @@
+///////////////////////////////////////////////////////////
+////        PROFILE CARD
+.profile-card-stack {
+  width: 100%;
+  // Above
+  &--above {
+    background-color: $color-primary-blue;
+    position: relative;
+    z-index: 10;
+  }
+
+  //Profile
+  .profile {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    //profile header
+    &__header {
+      margin-bottom: 2.5rem;
+      @include respond(700) {
+        margin-bottom: 0rem;
+        margin-right: auto;
+      }
+    }
+
+    // Profile Photo
+    &__photo {
+      border: 0.4rem solid snow;
+      border-radius: 50%;
+      height: 8rem;
+      width: 8rem;
+    }
+
+    // Profile Main
+    &__main {
+      @include respond(700) {
+        margin-left: auto;
+        justify-self: flex-end;
+      }
+      @include respond(425) {
+        width: 8rem;
+      }
+    }
+    // Profile Text
+    &__text {
+    }
+    // Profile Name
+    &__name {
+      margin-bottom: 6.5rem;
+      @include respond(700) {
+        margin-bottom: 0rem;
+      }
+    }
+
+    @include respond(700) {
+      flex-direction: row;
+      //   justify-content: space-between;
+      align-items: center;
+    }
+    @include respond(340) {
+      padding: 2rem 1.3rem;
+    }
+  }
+
+  // Below
+  &--below {
+    background-color: $color-neutral-dark-blue;
+    margin-top: -7rem;
+  }
+
+  //Timelines
+  .timelines {
+    padding: 10rem 3rem 3rem;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+
+      @include respond(700) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    @include respond(340) {
+      padding: 10rem 1.3rem 1rem;
+    }
+  }
+}

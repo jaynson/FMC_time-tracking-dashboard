@@ -1,0 +1,79 @@
+///////////////////////////////////////////////////////////
+////        MAIN CONTAINER
+.container {
+  padding: 5vh 0;
+  @include respond(1440) {
+    padding: 0;
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        MAIN COMPONENT
+.component {
+  background-color: $color-neutral-very-dark-blue;
+  max-width: $main-component-max-width-desktop;
+  @include margin-centralize;
+  max-height: $main-component-max-height-desktop;
+  padding: 25.6rem 0;
+
+  @include respond(1115) {
+    padding: 20rem 0;
+  }
+
+  @include respond(700) {
+    max-width: $main-component-max-width-mobile-650px;
+    max-height: $main-component-max-height-desktop + 100;
+    padding: 8rem 0;
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        MAIN CONTENT
+.content {
+  max-width: $content-max-width-desktop;
+  @include margin-centralize;
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(1125) {
+    padding: 0 1rem;
+  }
+
+  @include respond(700) {
+    max-width: $content-max-width-mobile;
+    flex-direction: column;
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        PROFILE SECTION
+.profile-section {
+  flex: 0 0 23.5%;
+
+  @include respond(960) {
+    flex: 0 0 30%;
+  }
+  @include respond(700) {
+    flex: 1;
+  }
+
+  //test
+}
+
+///////////////////////////////////////////////////////////
+////        ACTIVITIES SECTION
+.activities-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  flex: 0 0 74.5%;
+
+  @include respond(960) {
+    flex: 0 0 65%;
+  }
+  @include respond(700) {
+    flex: 1;
+    flex-direction: column;
+  }
+}
